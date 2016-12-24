@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Joomtriggers\Ideamart\SMS\Handler;
 use Joomtriggers\Ideamart\Handler as BaseHandler;
 
-class TwilioProvider extends ServiceProvider
+class IdeamartServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -20,7 +20,7 @@ class TwilioProvider extends ServiceProvider
                 $handler = (new BaseHandler())->sms();
                 $handler->setApplication($config['application']);
                 $handler->setSecret($config['password']);
-                $handler->setServer($config['server'] ? $config['server'] : "https://api.dialog.lk/sms/send/");
+                $handler->setServer(isset($config['server']) ? $config['server'] : "https://api.dialog.lk/sms/send/");
 
                 return $handler;
             });
