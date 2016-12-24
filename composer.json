@@ -1,20 +1,20 @@
 {
-    "name": "laravel-notification-channels/:package_name",
-    "description": ":package_description",
-    "homepage": "https://github.com/laravel-notification-channels/:package_name",
+    "name": "laravel-notification-channels/ideamart",
+    "description": "Ideamart Notification Channel",
+    "homepage": "https://github.com/laravel-notification-channels/ideamart",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": "Gnanakeethan Balasubramaniam",
+            "email": "gnanam@boun.cr",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">=5.6.4",
         "illuminate/notifications": "^5.3",
-        "illuminate/support": "^5.1|^5.2|^5.3"
+        "illuminate/support": "^5.1|^5.2|^5.3",
+        "joomtriggers/ideamart-php": "^1.1"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.5",
@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NotificationChannels\\:channel_namespace\\": "src"
+            "NotificationChannels\\Ideamart\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\:channel_namespace\\Test\\": "tests"
+            "NotificationChannels\\Ideamart\\Test\\": "tests"
         }
     },
     "scripts": {
